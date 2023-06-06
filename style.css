@@ -1,0 +1,169 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #efefef;
+  font-family: "Poppins", sans-serif;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0px 0px 20px 0px #32323233;
+  height: 70px;
+  padding: 20px;
+  overflow: hidden;
+}
+
+.menu li {
+  display: inline-block;
+  padding-right: 10px;
+  cursor: pointer;
+}
+.menu li.active {
+  color: rgb(99, 156, 221);
+}
+header > img {
+  width: 220px;
+  height: 80px;
+}
+
+.social li {
+  display: inline-block;
+  padding-right: 10px;
+  cursor: pointer;
+}
+h1 {
+  text-align: center;
+  margin: 35px;
+  font-size: 40px;
+}
+#details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.services {
+  padding: 20px;
+  flex-basis: 30%;
+}
+.services h2 {
+  margin-bottom: 20px;
+}
+.services div {
+  margin-bottom: 20px;
+}
+.services div span {
+  margin-right: 10px;
+  font-weight: bold;
+}
+.services div span:first-child {
+  font-size: 24px;
+}
+.services div p {
+  color: #666;
+  margin-top: 10px;
+}
+.photo {
+  flex-basis: 25%;
+  background-color: #999999e6;
+  width: 250px;
+  height: 270px;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 0 4px 5px #607d8b;
+}
+.photo img {
+  position: relative;
+  top: -23px;
+  width: 100%;
+  height: 363px;
+}
+.info {
+  flex-basis: 30%;
+  padding: 20px;
+}
+.info h2 {
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+.info p {
+  margin-bottom: 20px;
+  color: #666;
+  line-height: 1.5;
+}
+.info button {
+  margin-bottom: 20px;
+  width: 93px;
+  border: none;
+  background-color: black;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.info div:first-of-type span {
+  font-weight: bold;
+  font-size: 18px;
+  margin-right: 10px;
+}
+.info div:last-of-type span {
+  margin-right: 10px;
+}
+
+/* large screens */
+
+@media (min-width: 768px) {
+  i.fa-bars {
+    display: none;
+  }
+}
+/* tablets screen */
+
+@media (max-width: 768px) {
+  i.fa-bars {
+    display: block;
+    margin-left: 20px;
+    font-size: 20px;
+  }
+  .menu {
+    display: none;
+  }
+  .social {
+    display: none;
+  }
+
+  .services {
+    flex-basis: 48%;
+  }
+  .photo {
+    flex-basis: 48%;
+  }
+  .info {
+    flex-basis: 48%;
+  }
+}
+
+/* mobiles screen */
+
+@media (max-width: 576px) {
+  .services {
+    flex-basis: 98%;
+  }
+  .photo {
+    margin: 25px 10px;
+    height: 400px;
+    flex-basis: 98%;
+  }
+  .photo > img {
+    height: 450px;
+  }
+  .info {
+    flex-basis: 98%;
+  }
+}
